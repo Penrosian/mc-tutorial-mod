@@ -1,9 +1,7 @@
 package net.penrosian.tutorialmod.item;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.penrosian.tutorialmod.TutorialMod;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -21,10 +19,5 @@ public class ModItems {
 
     public static void registerModItems() {
         TutorialMod.LOGGER.info("Registering Mod Items for " + TutorialMod.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
-            fabricItemGroupEntries.add(PINK_GARNET);
-            fabricItemGroupEntries.add(RAW_PINK_GARNET);
-        });
     }
 }
